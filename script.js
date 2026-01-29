@@ -56,8 +56,8 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe all animated elements
-const animatedElements = document.querySelectorAll('.section-label, .section-title, .section-description, .about-card, .service-card, .portfolio-item, .tech-category, .client-logo, .info-card, .contact-form-wrapper');
+// Observe all animated elements (excluding portfolio items)
+const animatedElements = document.querySelectorAll('.section-label, .section-title, .section-description, .about-card, .service-card, .tech-category, .client-logo, .info-card, .contact-form-wrapper');
 
 animatedElements.forEach(el => {
     el.style.animationPlayState = 'paused';
